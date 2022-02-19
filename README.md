@@ -5,7 +5,7 @@ API is queried at regular intervals, and displayed to the user through a series 
 The current data is provided to the webpages using a form of AJAX through JSON data, allowing the data to be displayed in real-time without the need of 
 full-page refreshes.
 
-The NBA Scores Web App includes a user managment system, and provides the ability to hide scores based on criteria that can be customized by each user. 
+The NBA Scores Web App includes a user managment system, and provides the ability to hide scores based on criteria that can be customized. 
 This criteria is stored for each user, allowing the preferences to remain between sessions. This functionality allows the user the ability to find NBA 
 games without spoilers.
 
@@ -15,10 +15,7 @@ server can be created and accessed through Django's provided command-line utilit
 directory. After initiaing this command, the website can then be accessed using the url `http://127.0.0.1:8000/NBA/`. This url displays the home page of the 
 NBA Scores Web App.
 
-
-{Provide a link to your YouTube demonstration.  It should be a 4-5 minute demo of the software running (starting the server and navigating through the web pages) and a walkthrough of the code.}
-
-[Software Demo Video](http://youtube.link.goes.here)
+A demonstration of the app is provided here: [NBA Scores Web App Demonstration Video](https://youtu.be/vyL-GwbTPJI)
 
 # Web Pages
 The created web pages include:
@@ -42,7 +39,7 @@ The created web pages include:
 * Visual Studio Code | Version: 1.64.2
 
 # Useful Websites
-{Make a list of websites that you found helpful in this project}
+
 * [Django Official Tutorial](https://docs.djangoproject.com/en/stable/intro/tutorial01/) (Official Tutorial Site)
 * [Django Tutorial—RealPython](https://realpython.com/get-started-with-django-1/) (Tutorial)
 * [Django Tutorial—TutorialsPoint](https://www.tutorialspoint.com/django/index.htm) (Tutorial Site)
