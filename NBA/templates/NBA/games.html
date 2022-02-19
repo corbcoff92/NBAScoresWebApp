@@ -1,0 +1,18 @@
+<! –– Template used for displaying general information about the current NBA games ––>
+{% extends 'NBA/base.html' %}
+{% load static %}
+{% block NBA_page_content %}
+<h1>Today's Games</h1>
+{% if js_data.gameStatus == 1%}
+<h4>Scheduled Games</h4>
+{% elif js_data.gameStatus == 2%}
+<h4>In Progress Games</h4>
+{% elif js_data.gameStatus == 3%}
+<h4>Finished Games</h4>
+{% endif %}
+<div id="games_display" class="row" align="center">
+        
+</div>
+{{ js_data|json_script:"js_data" }}
+<script src="{% static 'NBA/scripts/display_games.js' %}"></script>
+{% endblock  %}

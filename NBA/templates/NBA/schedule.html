@@ -1,0 +1,28 @@
+<! –– Template used for displaying NBA games pertaining to a specific date ––>
+{% extends 'NBA/base.html' %}
+{% block NBA_page_content %}
+<div>
+    <div class="row">
+        <div class="col">
+            <h1>Schedule for {{ date }}</h1>
+        </div>
+    </div>
+    <div class="row" align="center">
+        {% if games %}
+            {% for game in games %}
+                {% if game.hidden %}
+                    {% include 'NBA/game_display_hidden.html' %}
+                {% else %}
+                    {% if game.gameStatus == 1 %}
+                        {% include 'NBA/game_display_pregame.html' %}
+                    {% elif game.gameStatus == 3 %}
+                        {% include 'NBA/game_display_finished.html' %}
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+        {% else %}
+            <h5>No games to display...</h5>
+        {% endif %}    
+    </div>
+</div>
+{% endblock  %}

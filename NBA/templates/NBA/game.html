@@ -1,0 +1,22 @@
+<! –– Template used for displaying detailed information about a specific NBA game ––>
+{% extends 'NBA/base.html' %}
+{% load static %}
+{% block NBA_page_content %}
+    <div class="col-md-12" align="center">
+        <h2 id="game_status_display"></h2>
+        <div id="game_display" class="cols-md-8">
+            
+        </div>
+        <h5 id="period"></h5>
+        <h5 id="game_clock"></h5>
+        <h5 id="last_action"></h5>
+        <div id="actions_links">
+            
+        </div>
+    </div>
+    <div id="actions_display">
+        
+    </div>
+    {{ js_data|json_script:"js_data" }}
+    <script src="{% static 'NBA/scripts/display_game.js' %}"></script>
+{% endblock  %}

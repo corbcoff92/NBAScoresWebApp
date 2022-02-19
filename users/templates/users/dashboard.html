@@ -1,0 +1,15 @@
+<! –– Template that displays the information and actions of the NBA Scores Web App currently loggin in user ––>
+{% extends 'NBA/base.html' %}
+{% block NBA_page_content %}
+Hello, {{ user.first_name|default:'Guest' }}!
+
+<div>
+    {% if user.is_authenticated %}
+        <a href="{% url 'users:logout' %}">Logout</a>
+        <a href="{% url 'NBA:games' %}">Back to NBA page</a>
+        <a href="{% url 'users:password_change' %}">Change password</a>
+    {% else %}
+        <a href="{% url 'users:login' %}">Login</a>
+    {% endif %}
+</div>
+{% endblock  %}

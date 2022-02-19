@@ -1,0 +1,29 @@
+<! –– Template used for displaying NBA games for which the scores should be hidden ––>
+<div class="col-lg-6 border rounded bg-secondary">
+    <div class="card-body container" align="center">
+        <h5 class="card-title">Hidden</h5>
+        <div class="row card-title">
+            <div class="col">
+                <h5>{{ game.awayTeam.teamName }}</h5>
+            </div>
+            <div class="col">
+            </div>
+            <div class="col">
+                <h5>{{ game.homeTeam.teamName }}</h5>
+            </div>
+        </div>
+        <div class="row card-title">
+            <div class="col">
+                <h4>-</h4>
+            </div>
+            <div class="col">
+            </div>
+            <div class="col">
+                <h4>-</h4>
+            </div>
+        </div>
+        <div class="row">
+            <a href={% url 'NBA:game' game.gameId%} class="btn btn-info">Details</a>
+        </div>
+    </div>
+</div>

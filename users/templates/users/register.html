@@ -1,0 +1,22 @@
+<! –– Template containing a form used for registering a new a user for the NBA Scores Web App ––>
+{% extends 'NBA/base.html' %}
+
+{% block NBA_page_content %}
+<h2>Register</h2>
+<style>
+    label, input {
+        display: block;
+    }
+    span.helptext{
+        display: none;
+    }
+</style>
+
+<form method="POST">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Register">
+</form>
+
+<a href="{% url 'users:login' %}"></a>
+{% endblock  %}

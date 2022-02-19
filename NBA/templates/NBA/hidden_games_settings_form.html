@@ -1,0 +1,19 @@
+<! –– Template containing a form that is used for obtaining information about hidden score preferences ––>
+{% extends 'NBA/base.html' %}
+
+{% block NBA_page_content %}
+<style>
+    label, input {
+        display: block;
+    }
+    span.helptext{
+        display: none;
+    }
+</style>
+<h1>{{ user.first_name}}'s Hide Score's Settings</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Apply"/>
+</form>
+{% endblock  %}

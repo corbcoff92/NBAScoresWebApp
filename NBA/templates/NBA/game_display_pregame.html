@@ -1,0 +1,21 @@
+<! –– Template used for displaying NBA games that have not yet begun ––>
+<div class="col-lg-6 border rounded bg-secondary">
+    <div class="card-body container" align="center">
+        <div class="row card-title">
+            <div class="col">
+                <h5>{{ game.awayTeam.teamName }}</h5>
+            </div>
+            <div class="col">
+                <h6>vs.</h6>
+            </div>
+            <div class="col">
+                <h5>{{ game.homeTeam.teamName }}</h5>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h5>{{ game.gameStatusText }}</h5>
+            </div>
+        </div>
+    </div>
+</div>
